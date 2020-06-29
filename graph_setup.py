@@ -10,7 +10,6 @@ def create_graph(filename):
     #print_info(graph)
     return graph
 
-
 def print_info(graph):
     for NI in graph.Nodes():
         print("node: %d, out-degree %d, in-degree %d" % (NI.GetId(), NI.GetOutDeg(), NI.GetInDeg()))
@@ -28,9 +27,7 @@ def edge_random_probability(graph):
             graph.DelEdge(n.GetId(), dest)
     print("numero di archi FINE: ", graph.GetEdges())
 
-
 def edge_degree_probability(graph):
-
     print("numero di archi: ", graph.GetEdges())
     count = 0
     for n in graph.Nodes():
@@ -46,20 +43,21 @@ def edge_degree_probability(graph):
     print("count: ", count)
     print("numero di archi FINE: ", graph.GetEdges())
 
-
 def set_random_threshold(graph):
     g = snap.ConvertGraph(snap.PNEANet, graph)
     for n in g.Nodes():
         max= n.GetDeg() + int((n.GetDeg()/100)*20+1)
         random_value = random.randint(0, max)
         g.AddIntAttrDatN(n.GetId(), random_value, "threshold")
-        print("valore: ", g.GetIntAttrDatN(n.GetId(), "threshold"))
+        #print("valore: ", g.GetIntAttrDatN(n.GetId(), "threshold"))
+    return g
 
 def set_fixed_threshold(graph, value):
     g = snap.ConvertGraph(snap.PNEANet, graph)
     for n in g.Nodes():
         g.AddIntAttrDatN(n.GetId(), value, "threshold")
-        print("valore: ", g.GetIntAttrDatN(n.GetId(), "threshold"))
+        #print("valore: ", g.GetIntAttrDatN(n.GetId(), "threshold"))
+    return g
 
 def set_median_threshold(graph):
     g = snap.ConvertGraph(snap.PNEANet, graph)
@@ -75,11 +73,11 @@ def set_median_threshold(graph):
         if n.GetDeg()<value:
             count+=1
     print("numero di nodi al di sotto della mediana: ", count)
+    return g
 
-
-g=create_graph(filename)
+"""g=create_graph(filename)
 edge_random_probability(g)
 print("---------------------------")
 g2=create_graph(filename)
 edge_degree_probability(g2)
-set_random_threshold(g2)
+set_random_threshold(g2)"""
