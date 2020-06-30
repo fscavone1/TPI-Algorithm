@@ -25,12 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="Add setup.py">
-      <change afterPath="$PROJECT_DIR$/tpi_algorithm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Progetto-RS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Progetto-RS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="First implementation of TPI Algorithm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/graph_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpi_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/tpi_algorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593288028433</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First implementation of TPI Algorithm">
+      <created>1593461741768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593461741768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,46 +192,52 @@
     <MESSAGE value="Setup Snap library" />
     <MESSAGE value="Add setup.py" />
     <MESSAGE value="Add graph_setup with first functions for graph setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add graph_setup with first functions for graph setup" />
+    <MESSAGE value="First implementation of TPI Algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="First implementation of TPI Algorithm" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="186" key="GridCell.Tab.0.bottom" timestamp="1593457705420">
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom" timestamp="1593532333606">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593457705420" />
-    <state width="1899" height="186" key="GridCell.Tab.0.center" timestamp="1593457705420">
+    <state width="1899" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333606" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center" timestamp="1593532333605">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593457705420" />
-    <state width="1899" height="186" key="GridCell.Tab.0.left" timestamp="1593457705420">
+    <state width="1899" height="186" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left" timestamp="1593532333605">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593457705420" />
-    <state width="1899" height="186" key="GridCell.Tab.0.right" timestamp="1593457705420">
+    <state width="1899" height="186" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right" timestamp="1593532333605">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593457705420" />
+    <state width="1899" height="186" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1593442930987">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593270997118" />
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1593442930987" />
-    <state x="609" y="269" key="Vcs.Push.Dialog.v2" timestamp="1593288077782">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="609" y="272" key="Vcs.Push.Dialog.v2" timestamp="1593461747460">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="609" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593288077782" />
+    <state x="609" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461747460" />
     <state x="677" y="308" key="git4idea.merge.GitPullDialog" timestamp="1593186377347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593186377347" />
-    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup" timestamp="1593453478649">
+    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup" timestamp="1593532044518">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593187462388" />
-    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593453478649" />
+    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593532044518" />
   </component>
 </project>

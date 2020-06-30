@@ -28,7 +28,7 @@ def tpi(graph):
         if thresholds.get(v) > degrees.get(v):
             incentives[v] = incentives[v] + thresholds[v] - degrees[v]
             count_3 += incentives[v]
-            print("Incentivo di ", v, " con valore: ", incentives[v])
+            #print("Incentivo di ", v, " con valore: ", incentives[v])
             count_2 += 1
             thresholds[v] = degrees[v]
             if thresholds[v] == 0:
@@ -48,13 +48,13 @@ def tpi(graph):
                         neighbors[u] = neighbors[u].remove(node)
                 nodes.remove(node)
 
-    print("Numero di incentivi totali: ", count_2, " con valore totale di", count_3, " e numero di nodi restanti: ", count)
+    print("Numero di incentivi totali:", count_2, "con valore totale di", count_3, "e numero di nodi restanti:", count)
 
 
-#G2=graph_setup.create_graph("Datasets/gnutella.txt")
-G2=snap.GenRndGnm(snap.PUNGraph, 100, 1000)
-graph_setup.edge_random_probability(G2)
-g=graph_setup.set_fixed_threshold(G2, 4)
+G2=graph_setup.create_graph("Datasets/gnutella.txt")
+#G2=snap.GenRndGnm(snap.PUNGraph, 100, 1000)
+graph_setup.edge_degree_probability(G2)
+g=graph_setup.set_random_threshold(G2)
 #print("GRAPH BEFORE:")
 #graph_setup.print_info(g)
 tpi(g)
