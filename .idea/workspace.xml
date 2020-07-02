@@ -19,51 +19,60 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/firstBranch" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:tpi_development" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="Add setup.py">
-      <change afterPath="$PROJECT_DIR$/Datasets/gnutella.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Datasets/twitter.txt" afterDir="false" />
+    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="First implementation of TPI Algorithm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datasets/twitchDE.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/graph_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/graph_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpi_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/tpi_algorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="firstBranch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1draa8L9MtXQu3cUQlAMQ5dltwn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Datasets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\effea\PycharmProjects\Progetto-RS" />
       <recent name="D:\PyCharm\Progetto-RS\Datasets" />
       <recent name="D:\PyCharm\Progetto-RS" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tpi_algorithm">
     <configuration name="graph_setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Progetto-RS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,8 +94,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tpi_algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Progetto-RS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tpi_algorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tpi_algorithm" />
         <item itemvalue="Python.graph_setup" />
       </list>
     </recent_temporary>
@@ -123,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593288028433</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First implementation of TPI Algorithm">
+      <created>1593461741768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593461741768</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,7 +175,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/firstBranch" />
+                        <option value="tpi_development" />
                       </list>
                     </value>
                   </entry>
@@ -154,40 +192,52 @@
     <MESSAGE value="Setup Snap library" />
     <MESSAGE value="Add setup.py" />
     <MESSAGE value="Add graph_setup with first functions for graph setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add graph_setup with first functions for graph setup" />
+    <MESSAGE value="First implementation of TPI Algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="First implementation of TPI Algorithm" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="425" key="GridCell.Tab.0.bottom" timestamp="1593363564353">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom" timestamp="1593532333606">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="425" key="GridCell.Tab.0.center" timestamp="1593363564353">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333606" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center" timestamp="1593532333605">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="425" key="GridCell.Tab.0.left" timestamp="1593363564353">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="186" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left" timestamp="1593532333605">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="425" key="GridCell.Tab.0.right" timestamp="1593363564353">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="186" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right" timestamp="1593532333605">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1593270997118">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1899" height="186" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
+    <state width="1899" height="340" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1593442930987">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593270997118" />
-    <state x="609" y="269" key="Vcs.Push.Dialog.v2" timestamp="1593288077782">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1593442930987" />
+    <state x="609" y="272" key="Vcs.Push.Dialog.v2" timestamp="1593461747460">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="609" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593288077782" />
+    <state x="609" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461747460" />
     <state x="677" y="308" key="git4idea.merge.GitPullDialog" timestamp="1593186377347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593186377347" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593187462388">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup" timestamp="1593532044518">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593187462388" />
+    <state x="623" y="227" width="672" height="685" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593532044518" />
   </component>
 </project>
