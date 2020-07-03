@@ -55,7 +55,7 @@ def set_random_threshold(graph):
         max= n.GetDeg() + int((n.GetDeg()/100)*20+1)
         random_value = random.randint(0, max)
         g.AddIntAttrDatN(n.GetId(), random_value, "threshold")
-        print("Threshold of the node ", n.GetId()," with value", g.GetIntAttrDatN(n.GetId()))
+        print("Threshold of the node ", n.GetId()," with value", g.GetIntAttrDatN(n.GetId(),"threshold"))
     return g
 
 #function to set fixed thresholds to the edges of the graph
@@ -77,7 +77,7 @@ def set_median_threshold(graph):
     print("The median value is: ", value)
     for n in g.Nodes():
         g.AddIntAttrDatN(n.GetId(), value, "threshold")
-        print("Threshold of the node ", n.GetId(), " with value ", g.GetIntAttrDatN(n.GetId()))
+        print("Threshold of the node ", n.GetId(), " with value ", g.GetIntAttrDatN(n.GetId(), "threshold"))
         if n.GetDeg()<value:
             count+=1
     print("Number of nodes below the median: ", count)
