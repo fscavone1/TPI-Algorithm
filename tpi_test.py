@@ -44,26 +44,25 @@ def random_fixed_test2():
 
 # RANDOM PROBABILITY - RANDOM THRESHOLD
 def random_random_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = 0
     file_name = "Tests/test_rr.csv"
-    open(file_name, 'w+').write("Threshold AVG_Incentives\n")
+    open(file_name, 'w+').write("Threshold Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
         graph = graph_setup.create_graph(dataset_fb)
         graph_setup.edge_random_probability(graph)
-        for i in range(0, 10):
-            g = graph_setup.set_random_threshold(graph)
-            tot_incentives = tpi_algorithm.tpi(g)
-            avg[i] += tot_incentives
+        g = graph_setup.set_random_threshold(graph)
+        tot_incentives = tpi_algorithm.tpi(g)
+        avg += tot_incentives
+        open(file_name, 'a+').write("%d %d\n" % (j+1, tot_incentives))
 
-    for y in range(0, 10):
-        open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
+    open(file_name, 'a+').write("Media %d\n" % (avg/iterations))
 
 # RANDOM PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
 def random_proportional_test():
     avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    file_name = "Tests/test_pp.csv"
+    file_name = "Tests/test_rp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
@@ -113,18 +112,23 @@ def proportional_fixed_test():
 
     for y in range(0, 10):
         open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
+        
+# PROPORTIONAL TO DEGREE PROBABILITY - RANDOM THRESHOLD
+def proportional_random_test():
+    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    file_name = "Tests/test_pr.csv"
+    open(file_name, 'w+').write("Threshold AVG_Incentives\n")
+    iterations = 50
 
-#print("GRAPH BEFORE:")
-#graph_setup.print_info(g)
+    for j in range(0, iterations):
+        graph = graph_setup.create_graph(dataset_fb)
+        graph_setup.edge_proportional_to_degree_probability(graph)
+        for i in range(0, 10):
+            g = graph_setup.set_random_threshold(graph)
+            tot_incentives = tpi_algorithm.tpi(g)
+            avg[i] += tot_incentives
 
-#print("GRAPH AFTER:")
-#graph_setup.print_info(g)
+    for y in range(0, 10):
+        open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
 
-#output.to_csv(os.path.join(base_dir, 'Output.csv'),index=False)
-#tech = pd.read_csv(tech_path)
-
-#random_fixed_test2()
-
-#random_proportional_test()
-proportional_fixed_test()
 
