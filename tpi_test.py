@@ -63,7 +63,25 @@ def random_random_test():
 # RANDOM PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
 def random_proportional_test():
     avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    file_name = "Tests/test_rp.csv"
+    file_name = "Tests/test_pp.csv"
+    open(file_name, 'w+').write("Threshold AVG_Incentives\n")
+    iterations = 50
+
+    for j in range(0, iterations):
+        graph = graph_setup.create_graph(dataset_fb)
+        graph_setup.edge_random_probability(graph)
+        for i in range(0, 10):
+            g = graph_setup.set_degree_proportional_thresholds(graph, (i+1)/10)
+            tot_incentives = tpi_algorithm.tpi(g)
+            avg[i] += tot_incentives
+
+    for y in range(0, 10):
+        open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
+
+# PROPORTIONAL TO DEGREE PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
+def proportional_proportional_test():
+    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    file_name = "Tests/test_pp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
@@ -71,7 +89,25 @@ def random_proportional_test():
         graph = graph_setup.create_graph(dataset_fb)
         graph_setup.edge_proportional_to_degree_probability(graph)
         for i in range(0, 10):
-            g = graph_setup.set_degree_proportional_thresholds(graph, (i+1)/10)
+            g = graph_setup.set_degree_proportional_thresholds(graph, (i + 1) / 10)
+            tot_incentives = tpi_algorithm.tpi(g)
+            avg[i] += tot_incentives
+
+    for y in range(0, 10):
+        open(file_name, 'a+').write("%d %d\n" % (y + 1, avg[y] / iterations))
+
+# PROPORTIONAL TO DEGREE PROBABILITY - FIXED THRESHOLD
+def proportional_fixed_test():
+    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    file_name = "Tests/test_pf.csv"
+    open(file_name, 'w+').write("Threshold AVG_Incentives\n")
+    iterations = 50
+
+    for j in range(0, iterations):
+        graph = graph_setup.create_graph(dataset_fb)
+        graph_setup.edge_proportional_to_degree_probability(graph)
+        for i in range(0, 10):
+            g = graph_setup.set_fixed_threshold(graph, i+1)
             tot_incentives = tpi_algorithm.tpi(g)
             avg[i] += tot_incentives
 
@@ -90,4 +126,5 @@ def random_proportional_test():
 #random_fixed_test2()
 
 #random_proportional_test()
+proportional_fixed_test()
 
