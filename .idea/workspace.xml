@@ -25,10 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="First implementation of TPI Algorithm">
+    <list default="true" id="8a025e80-072c-4390-bcb4-86f46b33eee2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/graph_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tpi_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/tpi_algorithm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test_rp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/test_pp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpi_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tpi_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -71,8 +71,12 @@
       <recent name="D:\PyCharm\Progetto-RS\Datasets" />
       <recent name="D:\PyCharm\Progetto-RS" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\effea\PycharmProjects\Progetto-RS\Tests" />
+      <recent name="C:\Users\effea\PycharmProjects\Progetto-RS\Datasets" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.tpi_algorithm">
+  <component name="RunManager" selected="Python.tpi_test">
     <configuration name="graph_setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Progetto-RS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,12 +119,46 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tpi_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Progetto-RS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tpi_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tpi_test" />
         <item itemvalue="Python.tpi_algorithm" />
         <item itemvalue="Python.graph_setup" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -161,8 +199,32 @@
       <option name="project" value="LOCAL" />
       <updated>1593461741768</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="TPI Algorithm update">
+      <created>1593533047356</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593533047356</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added new features, comments, testing files and notebook documentation creation">
+      <created>1593719267441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593719267441</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added new features, comments, testing files and notebook documentation creation">
+      <created>1593719783509</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593719783509</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -181,55 +243,113 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup Snap library" />
     <MESSAGE value="Add setup.py" />
     <MESSAGE value="Add graph_setup with first functions for graph setup" />
     <MESSAGE value="First implementation of TPI Algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="First implementation of TPI Algorithm" />
+    <MESSAGE value="TPI Algorithm update" />
+    <MESSAGE value="Added new features, comments, testing files and notebook documentation creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new features, comments, testing files and notebook documentation creation" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="340" key="GridCell.Tab.0.bottom" timestamp="1593532333606">
+    <state x="2646" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593704176926">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="726" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1593533157703" />
+    <state x="2646" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593704176926" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593616913086">
       <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593616913086" />
+    <state x="2534" y="135" key="CommitChangelistDialog2" timestamp="1593719781654">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2534" y="135" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719781654" />
+    <state x="2012" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1593719655282">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2012" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719655282" />
+    <state x="2306" y="256" key="FileChooserDialogImpl" timestamp="1593703048179">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2306" y="256" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593703048179" />
+    <state width="1899" height="394" key="GridCell.Tab.0.bottom" timestamp="1593790971510">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
-    <state width="1899" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333606" />
-    <state width="1899" height="340" key="GridCell.Tab.0.center" timestamp="1593532333605">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1899" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691454" />
+    <state width="1899" height="498" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593538048724" />
+    <state width="1899" height="394" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593790971510" />
+    <state width="1899" height="394" key="GridCell.Tab.0.center" timestamp="1593790971510">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.center/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
-    <state width="1899" height="340" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
-    <state width="1899" height="340" key="GridCell.Tab.0.left" timestamp="1593532333605">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1899" height="352" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691453" />
+    <state width="1899" height="498" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593538048724" />
+    <state width="1899" height="394" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593790971510" />
+    <state width="1899" height="394" key="GridCell.Tab.0.left" timestamp="1593790971509">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.left/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
-    <state width="1899" height="340" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
-    <state width="1899" height="340" key="GridCell.Tab.0.right" timestamp="1593532333605">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1899" height="352" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691453" />
+    <state width="1899" height="498" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593538048724" />
+    <state width="1899" height="394" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593790971509" />
+    <state width="1899" height="394" key="GridCell.Tab.0.right" timestamp="1593790971510">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="425" key="GridCell.Tab.0.right/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593363564353" />
-    <state width="1899" height="186" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461832459" />
-    <state width="1899" height="340" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593532333605" />
-    <state x="461" y="167" key="SettingsEditor" timestamp="1593442930987">
+    <state width="1899" height="352" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691453" />
+    <state width="1899" height="498" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593538048724" />
+    <state width="1899" height="394" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593790971510" />
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom" timestamp="1593627691454">
       <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691454" />
+    <state width="1899" height="352" key="GridCell.Tab.1.center" timestamp="1593627691454">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691454" />
+    <state width="1899" height="352" key="GridCell.Tab.1.left" timestamp="1593627691454">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691454" />
+    <state width="1899" height="352" key="GridCell.Tab.1.right" timestamp="1593627691454">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593627691454" />
+    <state x="2104" y="96" key="MergeDialog" timestamp="1593719634770">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2104" y="96" key="MergeDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719634770" />
+    <state x="2592" y="257" key="MultipleFileMergeDialog" timestamp="1593719637239">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2592" y="257" key="MultipleFileMergeDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719637239" />
+    <state x="2381" y="172" key="SettingsEditor" timestamp="1593703102613">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593270997118" />
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1593442930987" />
-    <state x="609" y="272" key="Vcs.Push.Dialog.v2" timestamp="1593461747460">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2381" y="172" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593703102613" />
+    <state x="2529" y="280" key="Vcs.Push.Dialog.v2" timestamp="1593719793444">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="609" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1593288077782" />
     <state x="609" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1366.738@0.0.1920.1050" timestamp="1593461747460" />
+    <state x="609" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1593533052146" />
+    <state x="2529" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719793444" />
+    <state x="2661" y="254" key="git4idea.branch.GitSmartOperationDialog" timestamp="1593719613918">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2661" y="254" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1593719613918" />
     <state x="677" y="308" key="git4idea.merge.GitPullDialog" timestamp="1593186377347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
