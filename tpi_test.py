@@ -9,11 +9,10 @@ sys.path.insert(0, parentdir)
 #import of the datasets
 dataset_fb = os.path.join('Datasets', 'facebook_combined.txt')
 dataset_twt = os.path.join('Datasets', 'twitter.txt')
-dataset_gn = os.path.join('Datasets', 'gnutella.txt')
 
 # RANDOM PROBABILITY - FIXED THRESHOLD
 def random_fixed_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = np.zeros(10)
     file_name = "Tests/test_rf.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
@@ -61,7 +60,7 @@ def random_random_test():
 
 # RANDOM PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
 def random_proportional_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = np.zeros(10)
     file_name = "Tests/test_rp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
@@ -79,7 +78,7 @@ def random_proportional_test():
 
 # PROPORTIONAL TO DEGREE PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
 def proportional_proportional_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = np.zeros(10)
     file_name = "Tests/test_pp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
@@ -97,7 +96,7 @@ def proportional_proportional_test():
 
 # PROPORTIONAL TO DEGREE PROBABILITY - FIXED THRESHOLD
 def proportional_fixed_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = np.zeros(10)
     file_name = "Tests/test_pf.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
@@ -115,7 +114,7 @@ def proportional_fixed_test():
         
 # PROPORTIONAL TO DEGREE PROBABILITY - RANDOM THRESHOLD
 def proportional_random_test():
-    avg = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    avg = np.zeros(10)
     file_name = "Tests/test_pr.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
@@ -130,5 +129,3 @@ def proportional_random_test():
 
     for y in range(0, 10):
         open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
-
-
