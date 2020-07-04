@@ -45,7 +45,7 @@ def random_fixed_test2():
 def random_random_test():
     avg = 0
     file_name = "Tests/test_rr.csv"
-    open(file_name, 'w+').write("Threshold Incentives\n")
+    open(file_name, 'w+').write("Iteration Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
