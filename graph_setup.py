@@ -1,5 +1,6 @@
 import snap
 import random
+from networkx import nx
 from statistics import median
 import math
 
@@ -8,6 +9,16 @@ def create_graph(filename):
     graph = snap.LoadEdgeList(snap.PUNGraph, filename, 0, 1)
     #print_info(graph)
     return graph
+
+#function for the generation of a random graph
+def random_graph_generator(nodes, edges, num):
+    graph = nx.gnm_random_graph(nodes,edges)
+    path = "Datasets/rnd_graph_"+num+".txt"
+    fh = open(path, 'wb')
+    nx.write_edgelist(graph, fh, encoding="utf-8")
+
+    g = create_graph(path)
+    #print_info(g)
 
 #function for printing information relating to the input graph
 def print_info(graph):
@@ -55,7 +66,7 @@ def set_random_threshold(graph):
         max= n.GetDeg() + int((n.GetDeg()/100)*20+1)
         random_value = random.randint(0, max)
         g.AddIntAttrDatN(n.GetId(), random_value, "threshold")
-        print("Threshold of the node ", n.GetId()," with value", g.GetIntAttrDatN(n.GetId(),"threshold"))
+        #print("Threshold of the node ", n.GetId()," with value", g.GetIntAttrDatN(n.GetId(),"threshold"))
     return g
 
 #function to set fixed thresholds to the edges of the graph
