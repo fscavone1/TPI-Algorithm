@@ -7,9 +7,14 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 #import of the datasets
-dataset_fb = os.path.join('Datasets', 'facebook_combined.txt')
-dataset_twt = os.path.join('Datasets', 'twitter.txt')
-dataset_tch = os.path.join('Datasets', 'musae_PTBR.txt')
+facebook = os.path.join('Datasets', 'facebook_combined.txt')
+twitter = os.path.join('Datasets', 'twitter.txt')
+twitch = os.path.join('Datasets', 'musae_PTBR.txt')
+gnutella = os.path.join('Datasets', 'p2p_Gnutella04.txt')
+
+rnd_1 = os.path.join('Datasets', 'rnd_graph_1.txt')
+rnd_2 = os.path.join('Datasets', 'rnd_graph_2.txt')
+rnd_3 = os.path.join('Datasets', 'rnd_graph_3.txt')
 
 # RANDOM PROBABILITY - FIXED THRESHOLD
 def random_fixed_test(dataset, path):
@@ -35,7 +40,7 @@ def random_fixed_test2():
     open(file_name, 'w+').write("Threshold Incentives\n")
     iterations = 51
 
-    graph = graph_setup.create_graph(dataset_twt)
+    graph = graph_setup.create_graph(twitter)
     graph_setup.edge_random_probability(graph)
     for i in range (5,iterations,5):
         g = graph_setup.set_fixed_threshold(graph, i)
