@@ -12,14 +12,14 @@ dataset_twt = os.path.join('Datasets', 'twitter.txt')
 dataset_tch = os.path.join('Datasets', 'musae_PTBR.txt')
 
 # RANDOM PROBABILITY - FIXED THRESHOLD
-def random_fixed_test():
+def random_fixed_test(dataset, path):
     avg = np.zeros(10)
-    file_name = "Tests/test_rf.csv"
+    file_name = "Tests/"+dataset+"_tests/test_rf.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_tch)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_random_probability(graph)
         for i in range(0, 10):
             g = graph_setup.set_fixed_threshold(graph, i+1)
@@ -43,14 +43,14 @@ def random_fixed_test2():
         open(file_name, 'a+').write("%d %d\n" % (i, tot_incentives))
 
 # RANDOM PROBABILITY - RANDOM THRESHOLD
-def random_random_test():
+def random_random_test(dataset, path):
     avg = 0
-    file_name = "Tests/facebook_combined_tests/test_rr.csv"
+    file_name = "Tests/"+dataset+"_tests/test_rr.csv"
     open(file_name, 'w+').write("Iteration Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_fb)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_random_probability(graph)
         g = graph_setup.set_random_threshold(graph)
         tot_incentives = tpi_algorithm.tpi(g)
@@ -60,14 +60,14 @@ def random_random_test():
     open(file_name, 'a+').write("Media %d\n" % (avg/iterations))
 
 # RANDOM PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
-def random_proportional_test():
+def random_proportional_test(dataset, path):
     avg = np.zeros(10)
-    file_name = "Tests/test_rp.csv"
+    file_name = "Tests/"+dataset+"_tests/test_rp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_tch)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_random_probability(graph)
         for i in range(0, 10):
             g = graph_setup.set_degree_proportional_thresholds(graph, (i+1)/10)
@@ -78,14 +78,14 @@ def random_proportional_test():
         open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
 
 # PROPORTIONAL TO DEGREE PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
-def proportional_proportional_test():
+def proportional_proportional_test(dataset, path):
     avg = np.zeros(10)
-    file_name = "Tests/facebook_combined_tests/test_pp.csv"
+    file_name = "Tests/"+dataset+"_tests/test_pp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_fb)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_proportional_to_degree_probability(graph)
         for i in range(0, 10):
             g = graph_setup.set_degree_proportional_thresholds(graph, (i + 1) / 10)
@@ -96,14 +96,14 @@ def proportional_proportional_test():
         open(file_name, 'a+').write("%d %d\n" % (y + 1, avg[y] / iterations))
 
 # PROPORTIONAL TO DEGREE PROBABILITY - FIXED THRESHOLD
-def proportional_fixed_test():
+def proportional_fixed_test(dataset, path):
     avg = np.zeros(10)
-    file_name = "Tests/facebook_combined_tests/test_pf.csv"
+    file_name = "Tests/"+dataset+"_tests/test_pf.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_fb)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_proportional_to_degree_probability(graph)
         for i in range(0, 10):
             g = graph_setup.set_fixed_threshold(graph, i+1)
@@ -114,14 +114,14 @@ def proportional_fixed_test():
         open(file_name, 'a+').write("%d %d\n" % (y+1, avg[y]/iterations))
         
 # PROPORTIONAL TO DEGREE PROBABILITY - RANDOM THRESHOLD
-def proportional_random_test():
+def proportional_random_test(dataset, path):
     avg = np.zeros(10)
-    file_name = "Tests/facebook_combined_tests/test_pr.csv"
+    file_name = "Tests/"+dataset+"_tests/test_pr.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
     for j in range(0, iterations):
-        graph = graph_setup.create_graph(dataset_fb)
+        graph = graph_setup.create_graph(path)
         graph_setup.edge_proportional_to_degree_probability(graph)
         for i in range(0, 10):
             g = graph_setup.set_random_threshold(graph)
