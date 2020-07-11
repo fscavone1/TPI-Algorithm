@@ -9,7 +9,7 @@ sys.path.insert(0, parentdir)
 #import of the datasets
 dataset_fb = os.path.join('Datasets', 'facebook_combined.txt')
 dataset_twt = os.path.join('Datasets', 'twitter.txt')
-dataset_tch = os.path.join('Datasets', 'musae_PTBR_edges.txt')
+dataset_tch = os.path.join('Datasets', 'musae_PTBR.txt')
 
 # RANDOM PROBABILITY - FIXED THRESHOLD
 def random_fixed_test():
@@ -31,7 +31,7 @@ def random_fixed_test():
 
 # RANDOM PROBABILITY - FIXED THRESHOLD x5
 def random_fixed_test2():
-    file_name = "Tests/real_dataset_tests/test_rf2.csv"
+    file_name = "Tests/test_rf_twitter.csv"
     open(file_name, 'w+').write("Threshold Incentives\n")
     iterations = 51
 
@@ -45,7 +45,7 @@ def random_fixed_test2():
 # RANDOM PROBABILITY - RANDOM THRESHOLD
 def random_random_test():
     avg = 0
-    file_name = "Tests/real_dataset_tests/test_rr.csv"
+    file_name = "Tests/facebook_combined_tests/test_rr.csv"
     open(file_name, 'w+').write("Iteration Incentives\n")
     iterations = 50
 
@@ -80,7 +80,7 @@ def random_proportional_test():
 # PROPORTIONAL TO DEGREE PROBABILITY - PROPORTIONAL TO DEGREE THRESHOLD
 def proportional_proportional_test():
     avg = np.zeros(10)
-    file_name = "Tests/real_dataset_tests/test_pp.csv"
+    file_name = "Tests/facebook_combined_tests/test_pp.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
@@ -98,7 +98,7 @@ def proportional_proportional_test():
 # PROPORTIONAL TO DEGREE PROBABILITY - FIXED THRESHOLD
 def proportional_fixed_test():
     avg = np.zeros(10)
-    file_name = "Tests/real_dataset_tests/test_pf.csv"
+    file_name = "Tests/facebook_combined_tests/test_pf.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
@@ -116,7 +116,7 @@ def proportional_fixed_test():
 # PROPORTIONAL TO DEGREE PROBABILITY - RANDOM THRESHOLD
 def proportional_random_test():
     avg = np.zeros(10)
-    file_name = "Tests/real_dataset_tests/test_pr.csv"
+    file_name = "Tests/facebook_combined_tests/test_pr.csv"
     open(file_name, 'w+').write("Threshold AVG_Incentives\n")
     iterations = 50
 
