@@ -8,6 +8,6 @@ L'algoritmo TPI rappresenta una evoluzione dell'algoritmo di *Target Set Selecti
 Formalmente è definito come segue:
 - **Istanza**, una rete *G=(V,E)* con una funzione di soglie *t:V → N*.
 - **Problema**, trovare un target vector *s* che minimizza *C(S)=Σ<sub>v ∈ V</sub>s(v)*.
-L'algoritmo utilizzato per il calcolo degli incentivi è descritto nell'articolo ``Whom to befriend to influence people". 
+L'algoritmo utilizzato per il calcolo degli incentivi è descritto nell'articolo "Whom to befriend to influence people". 
 
-Per i dettagli sull'implementazione si può visitare il notebook al seguente <a href={https://github.com/fscavone1/TPI-Algorithm/blob/master/documentation.ipynb}>link</a>
+Per i dettagli sull'implementazione si può visitare il notebook al seguente <a href="https://github.com/fscavone1/TPI-Algorithm/blob/master/documentation.ipynb">link</a>.
