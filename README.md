@@ -13,4 +13,4 @@ L'algoritmo utilizzato per il calcolo degli incentivi è descritto nell'articolo
 Per i dettagli sull'implementazione si può visitare il notebook al seguente <a href="https://github.com/fscavone1/TPI-Algorithm/blob/master/documentation.ipynb">link</a>.
 
 ## Authors
-***Francesca Scavone**, ***Catello Graziuso***, ***Francesco Marzullo*** realizzato per il corso magistrale Reti Sociali dell'anno 2019/2020 presso l'Università degli Studi di Salerno.
+***Francesca Scavone***, ***Catello Graziuso***, ***Francesco Marzullo*** realizzato per il corso magistrale Reti Sociali dell'anno 2019/2020 presso l'Università degli Studi di Salerno.
